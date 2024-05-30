@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/services">Our Services</a>
+        <a href="/contact">Contact Us</a>
+    </div>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="content">
+            <button onclick="toggleRequestForm()">Show Request Form</button>
+            <div id="requestForm" class="hidden">
+                <form>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" value=""><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" value=""><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email" value=""><br>
+                    <label for="request">Please enter your request here:</label><br>
+                    <textarea id="request" name="request"></textarea><br><br>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </form> 
+            </div>
+            
+            <button onclick="toggleContactInfo()">Show Contact Information</button>
+            
+            <div id="contactTable" class="hidden">
+                <h2>Our Contact Information</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Department</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Customer Service</td>
+                            <td>customer.service@gmail.com</td>
+                            <td>+123 456 7890</td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td>support@gmail.com</td>
+                            <td>+123 456 7891</td>
+                        </tr>
+                        <tr>
+                            <td>Sales</td>
+                            <td>sales@gmail.com</td>
+                            <td>+123 456 7892</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleRequestForm() {
+            const requestForm = document.getElementById('requestForm');
+            requestForm.classList.toggle('hidden');
+        }
+
+        function toggleContactInfo() {
+            const contactTable = document.getElementById('contactTable');
+            contactTable.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
+
